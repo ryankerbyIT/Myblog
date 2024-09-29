@@ -14,15 +14,16 @@
   },
   "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy/",
   "scripts": {
-    "build": "concurrently npm:build:*",
-    "build:css": "purgecss -c purgecss.config.js",
-    "build:js": "rollup -c --bundleConfigAsCjs --environment BUILD:production",
-    "watch:js": "rollup -c --bundleConfigAsCjs -w",
-    "lint:scss": "stylelint _sass/**/*.scss",
-    "lint:fix:scss": "npm run lint:scss -- --fix",
-    "test": "npm run lint:scss",
-    "prepare": "husky"
-  },
+  "build": "concurrently npm:build:*",
+  "build:css": "purgecss -c purgecss.config.js",
+  "build:js": "rollup -c --bundleConfigAsCjs --environment BUILD:production",
+  "watch:js": "rollup -c --bundleConfigAsCjs -w",
+  "lint:scss": "stylelint _sass/**/*.scss",
+  "lint:fix:scss": "npm run lint:scss -- --fix",
+  "test": "npm run lint:scss",
+  "prepare": "husky",
+  "start": "jekyll serve"
+},
   "dependencies": {
     "@popperjs/core": "^2.11.8",
     "bootstrap": "^5.3.3"
