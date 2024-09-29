@@ -13,32 +13,35 @@ description: >-
 
 # URL Settings
 url: "https://ryankerbyIT.github.io"
-baseurl: "/blogfolio"
+baseurl: "/blogfolio" # Note: This should match your GitHub repository name
 
 # Social Links and GitHub
 github:
   username: ryankerbyIT
 
 social:
-  name: Ryan_Kerby
+  name: Ryan Kerby
   email: rkerby@memphis.edu
   links:
     - https://github.com/ryankerbyIT
+    # Uncomment and add more links if needed
+    # - https://twitter.com/your_username
+    # - https://linkedin.com/in/your_username
 
 # Site Verification Settings
 webmaster_verifications:
-  google:
-  bing:
+  google: "" # Insert your Google verification code
+  bing: "" # Insert your Bing verification code
 
 # Analytics Settings
 analytics:
   google:
-    id:
+    id: "" # Insert your Google Analytics ID
   goatcounter:
-    id:
+    id: "" # Insert your GoatCounter ID
 
 # Site Appearance
-theme_mode: # [light | dark]
+theme_mode: light # Options: light, dark, or leave empty to follow system preference
 
 # Sidebar Avatar
 avatar: "./assets/avatar.jpg"
@@ -66,9 +69,11 @@ defaults:
       layout: page
       permalink: /:title/
 
+# Sass Settings
 sass:
   style: compressed
 
+# HTML Compression Settings
 compress_html:
   clippings: all
   comments: all
@@ -76,6 +81,7 @@ compress_html:
   profile: false
   blanklines: false
 
+# Exclude files and directories from the site build
 exclude:
   - "*.gem"
   - "*.gemspec"
@@ -86,6 +92,7 @@ exclude:
   - "*.config.js"
   - package*.json
 
+# Jekyll Archives Plugin
 jekyll-archives:
   enabled: [categories, tags]
   layouts:
