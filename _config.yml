@@ -41,7 +41,7 @@ analytics:
     id: "" # Insert your GoatCounter ID
 
 # Site Appearance
-theme_mode: light # Options: light, dark, or leave empty to follow system preference
+theme_mode: dark # Options: light, dark, or leave empty to follow system preference
 
 # Sidebar Avatar
 avatar: "./assets/avatar.jpg"
