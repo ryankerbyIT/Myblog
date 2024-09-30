@@ -22,12 +22,12 @@ Domineering is a two-player strategy game played on an 8x8 grid. Each player tak
 This in-depth guide will take you through building Domineering in Java using an object-oriented approach. We’ll explore the logic behind the game, showcase how data structures like 2D arrays are employed, and discuss how various algorithms work together to simulate the game. Along the way, code examples will illustrate key aspects of the implementation.
 
 ## Overview of the Game
-1. **Players:** Two players take turns placing dominoes. One places them horizontally, and the other places them vertically.
-2. **Objective:** Be the last player able to make a legal move.
-3. **Gameplay:** Players place dominoes (occupying two adjacent squares) onto an 8x8 grid. The game ends when one player cannot make a valid move.
+1. `Players:` Two players take turns placing dominoes. One places them horizontally, and the other places them vertically.
+2. `Objective:` Be the last player able to make a legal move.
+3. `Gameplay:` Players place dominoes (occupying two adjacent squares) onto an 8x8 grid. The game ends when one player cannot make a valid move.
 
 ### Setting Up the Game: The **Domineering** Class
-The entire game logic is encapsulated within a single class named **Domineering**. This class contains methods and attributes that handle the board's state, manage player moves, and enforce the rules of the game.
+The entire game logic is encapsulated within a single class named `Domineering`. This class contains methods and attributes that handle the board's state, manage player moves, and enforce the rules of the game.
 
 ## Code Walkthrough
 ### 1. Defining the Board: Using a 2D Boolean Array
@@ -45,12 +45,12 @@ public Domineering() {
 ```
 
 ### Explanation:
-- **squares** **Array: A** **boolean[][]** array of size **8x8** is initialized to represent the board. Each element is **false** by default (Java initializes boolean arrays to **false**), indicating that the squares are unoccupied.
-- **Space Complexity:** The array has a fixed size of 64 elements, making it a memory-efficient way to represent the board.
-- **Time Complexity:** Accessing or modifying the elements of the array is an **O(1)** operation, allowing for quick checks and updates during gameplay.
+- `squares` `Array: A` `boolean[][]` array of size `8x8` is initialized to represent the board. Each element is `false` by default (Java initializes boolean arrays to `false`), indicating that the squares are unoccupied.
+- `Space Complexity:` The array has a fixed size of 64 elements, making it a memory-efficient way to represent the board.
+- `Time Complexity:` Accessing or modifying the elements of the array is an `O(1)` operation, allowing for quick checks and updates during gameplay.
 
 ### 2. Rendering the Board: The **toString** Method
-The board's current state is visualized using the **toString** method, which provides a string representation of the board.
+The board's current state is visualized using the `toString` method, which provides a string representation of the board.
 ```java
 @Override
 public String toString() {
