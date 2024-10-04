@@ -4,7 +4,7 @@ description: "Learn how to securely deploy, scale, and manage cloud-native appli
 author: Ryan Kerby
 date: 2024-10-01 12:00:00 +0800
 categories: [DevOps, Solutions Architecture]
-tags: [Azure, Cloud-Native, Container Apps, DevOps, Azure Container Registry, Azure Pipelines, Docker,]
+tags: [Azure, Cloud-Native, Container Apps, DevOps]
 pin: true
 math: false
 mermaid: false
