@@ -9,7 +9,7 @@ pin: true
 math: false
 mermaid: false
 image:
-  path: /assets/images/azure-container-apps.jpg
+  path: /assets/images/azure-container-app-deploy.jpg
   alt: "An abstract visual representation of programming The Game of Domineering in Java."
 ---
 
