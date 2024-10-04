@@ -1,10 +1,10 @@
 ---
 title: "Deploying Cloud-Native Applications Using Azure Container Apps: A Comprehensive Guide"
 description: "Learn how to securely deploy, scale, and manage cloud-native applications using Azure Container Apps, Azure Container Registry, and Azure Pipelines."
-author: "Ryan E Kerby"
-date: 2024-10-03 12:00:00 +0800
+author: Ryan Kerby
+date: 2024-10-01 12:00:00 +0800
 categories: [DevOps, Solutions Architecture]
-tags: [Azure, Cloud-Native, Container Apps, DevOps, Azure Container Registry, Azure Pipelines, Docker, CI/CD, Kubernetes, Serverless, Microservices, Cloud Computing, Application Deployment, Cloud Security, Autoscaling, Microsoft Azure]
+tags: [Azure, Cloud-Native, Container Apps, DevOps, Azure Container Registry, Azure Pipelines, Docker,]
 pin: true
 math: false
 mermaid: false
