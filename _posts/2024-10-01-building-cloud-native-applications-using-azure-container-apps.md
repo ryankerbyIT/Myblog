@@ -19,8 +19,7 @@ image:
 ## Introduction
 In today's rapidly evolving software development landscape, the demand for efficient, scalable, and secure application deployment methods is higher than ever. Cloud-native applications have emerged as a key solution, offering unparalleled flexibility and performance. Among the tools and platforms enabling this shift, Azure Container Apps stand out as a versatile, fully managed service that simplifies the deployment and management of containerized applications.
 
-> This guide aims to provide DevOps engineers and software developers with a detailed walkthrough on how to leverage Azure Container Apps, Azure Container Registry, and Azure Pipelines to build, deploy, scale, and manage cloud-native applications. By the end of this post, you will have a clear understanding of how to configure a secure deployment pipeline using these Azure services.
-{:.prompt-note}
+This guide aims to provide DevOps engineers and software developers with a detailed walkthrough on how to leverage Azure Container Apps, Azure Container Registry, and Azure Pipelines to build, deploy, scale, and manage cloud-native applications. By the end of this post, you will have a clear understanding of how to configure a secure deployment pipeline using these Azure services.
 
 ## Section 1: Overview of Azure Container Apps
 
