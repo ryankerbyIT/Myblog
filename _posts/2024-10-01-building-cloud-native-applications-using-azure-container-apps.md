@@ -1,10 +1,10 @@
 ---
 title: "Deploying Cloud-Native Applications Using Azure Container Apps: A Comprehensive Guide"
 description: "Learn how to securely deploy, scale, and manage cloud-native applications using Azure Container Apps, Azure Container Registry, and Azure Pipelines."
-author: Ryan Kerby
+author: "Ryan Kerby"
 date: 2024-10-01 12:00:00 +0800
-categories: [DevOps, Solutions Architecture]
-tags: [Azure, Cloud-Native, Container Apps, DevOps]
+categories: [Blogging, DevOps]
+tags: [Azure, Cloud-Native, Container Apps, DevOps, Cloud Computing, Azure Pipelines, Software Development, Solutions Architecture, CI/CD, Kubernetes, Docker]
 pin: true
 math: false
 mermaid: false
@@ -251,7 +251,7 @@ Feel free to explore more advanced topics, integrate other Azure services, and t
 
 ### 1. Can I use other container registries with Azure Container Apps?
 > Yes, Azure Container Apps can work with other container registries such as Docker Hub and private registries. However, you must configure appropriate access credentials and permissions to enable secure pulls from these registries.
-{:.prompt-info}
+{:.prompt-tip}
 
 ### 2. How is Azure Container Apps different from Azure Kubernetes Service (AKS)?
 > Azure Container Apps is a fully managed serverless container platform that abstracts much of the complexity of Kubernetes management, such as cluster provisioning, scaling, and maintenance. AKS, on the other hand, provides a more comprehensive Kubernetes experience, allowing for more control over container orchestration, custom scaling rules, and networking configurations. Use Azure Container Apps for simpler, serverless deployments, and AKS for complex, large-scale, Kubernetes-based microservices architectures.
