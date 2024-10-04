@@ -59,10 +59,11 @@ Azure Container Registry is a managed Docker registry service that provides a se
 To create an ACR, you can use the Azure portal or Azure CLI. Here, we demonstrate the process using the Azure CLI:
 
 1. Open the terminal and execute the following command:
+
 ```bash
 az acr create --resource-group myResourceGroup --name myContainerRegistry --sku Basic
-
 ```
+
 Replace `myResourceGroup` with the name of your resource group and `myContainerRegistry` with a unique name for your registry. The `--sku Basic` flag specifies the pricing tier. You can choose between Basic, Standard, and Premium, depending on your needs. 
 
 ### Pushing Docker Images to ACR
@@ -171,6 +172,7 @@ steps:
       inlineScript: |
         az containerapp create --name myApp --resource-group myResourceGroup --image $(ACR_NAME).azurecr.io/myapp:$(Build.BuildId) --environment myEnv
 ```
+
 3. **Integrate ACR with Azure Pipelines:** Configure a service connection in Azure DevOps to securely authenticate with your Azure Container Registry.
 
 ### Best Practices for Secure Deployment
@@ -234,14 +236,14 @@ This guide walked you through setting up a secure container registry, deploying 
 Feel free to explore more advanced topics, integrate other Azure services, and tailor your cloud-native applications to meet your specific business needs. The possibilities with Azure's cloud services are vast and ready to be explored. Happy deploying!
 
 ## References
-```markdown
+
 - [Azure Container Apps Documentation](https://learn.microsoft.com/en-us/azure/container-apps/)
 - [Azure Container Registry Documentation](https://learn.microsoft.com/en-us/azure/container-registry/)
 - [Azure Pipelines Documentation](https://learn.microsoft.com/en-us/azure/devops/pipelines/)
 - [Kubernetes Event-driven Autoscaling (KEDA)](https://keda.sh/)
 - [Azure Monitor Documentation](https://learn.microsoft.com/en-us/azure/azure-monitor/)
 - [Deploying Microservices to Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/microservices-deploy)
-```
+
 
 ## Frequently Asked Questions (FAQs)
 
