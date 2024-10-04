@@ -10,7 +10,7 @@ math: false
 mermaid: false
 image:
   path: /assets/images/azure-container-app-deploy.jpg
-  alt: "An abstract visual representation of programming The Game of Domineering in Java. "
+  alt: "An abstract visual representation of deploying cloud-native applications using Azure Container Apps. "
 ---
 
 
@@ -24,7 +24,7 @@ This guide aims to provide DevOps engineers and software developers with a detai
 ## Section 1: Overview of Azure Container Apps
 
 ### What Are Azure Container Apps?
- Azure Container Apps is a serverless container service provided by Microsoft Azure that simplifies the deployment and operation of microservices and containerized applications. It is designed to host containers without the need to manage the underlying infrastructure. This is especially useful for applications that require scalability, resilience, and rapid iteration. {: .prompt-info }
+ > **Info:** Azure Container Apps is a serverless container service provided by Microsoft Azure that simplifies the deployment and operation of microservices and containerized applications. It is designed to host containers without the need to manage the underlying infrastructure. This is especially useful for applications that require scalability, resilience, and rapid iteration. {: .prompt-info }
 
  With Azure Container Apps, you can:
 - Run application containers in a fully managed environment.
@@ -45,7 +45,7 @@ This guide aims to provide DevOps engineers and software developers with a detai
 ## Section 2: Setting Up Azure Container Registry (ACR)
 
 ### What is Azure Container Registry?
-Azure Container Registry is a managed Docker registry service that provides a secure and scalable way to store and manage container images. It integrates seamlessly with Azure services, including Azure Container Apps, to facilitate the deployment of containerized applications. {: .prompt-info }
+Azure Container Registry is a managed Docker registry service that provides a secure and scalable way to store and manage container images. It integrates seamlessly with Azure services, including Azure Container Apps, to facilitate the deployment of containerized applications. 
 
 ### Creating an Azure Container Registry
 To create an ACR, you can use the Azure portal or Azure CLI. Here, we demonstrate the process using the Azure CLI:
@@ -55,7 +55,7 @@ To create an ACR, you can use the Azure portal or Azure CLI. Here, we demonstrat
 az acr create --resource-group myResourceGroup --name myContainerRegistry --sku Basic
 
 ```
-Replace `myResourceGroup` with the name of your resource group and `myContainerRegistry` with a unique name for your registry. The `--sku Basic` flag specifies the pricing tier. You can choose between Basic, Standard, and Premium, depending on your needs. {: .prompt-tip }
+Replace `myResourceGroup` with the name of your resource group and `myContainerRegistry` with a unique name for your registry. The `--sku Basic` flag specifies the pricing tier. You can choose between Basic, Standard, and Premium, depending on your needs. 
 
 
 ### Pushing Docker Images to ACR
@@ -75,7 +75,7 @@ docker push mycontainerregistry.azurecr.io/myapp:v1
 
 ### Security Best Practices for ACR
 - Private Link: Enable Azure Private Link to restrict access to the registry, ensuring that only resources within your virtual network can access the registry.
-- Managed Identities: Use managed identities to allow Azure Container Apps to securely pull images from ACR without requiring explicit credentials. {: .prompt-warning }
+- Managed Identities: Use managed identities to allow Azure Container Apps to securely pull images from ACR without requiring explicit credentials. 
 
 ## Section 3: Deploying Containers with Azure Container Apps
 
@@ -105,7 +105,7 @@ View logs and metrics in real-time using the Azure portal or Azure CLI.
 
 ## Section 4: Automating Deployments with Azure Pipelines
 ### Introduction to Azure Pipelines for CI/CD
-Azure Pipelines is a continuous integration and delivery (CI/CD) service provided by Azure DevOps. It allows you to automate the process of building, testing, and deploying containerized applications to Azure services. {: .prompt-info }
+Azure Pipelines is a continuous integration and delivery (CI/CD) service provided by Azure DevOps. It allows you to automate the process of building, testing, and deploying containerized applications to Azure services. 
 
 ### Setting Up a CI/CD Pipeline for Azure Container Apps
 1. **Create a Pipeline:** Start by creating a new pipeline in Azure DevOps. This pipeline will automate the building of the Docker image, push it to ACR, and deploy the image to Azure Container Apps.
@@ -113,6 +113,7 @@ Azure Pipelines is a continuous integration and delivery (CI/CD) service provide
 - **Build Stage:** This stage builds the Docker image.
 - **Push Stage:** Pushes the image to ACR.
 - **Deploy Stage:** Deploys the image to Azure Container Apps.
+
 Sample **YAML** configuration:
 ```yaml
 trigger:
@@ -135,11 +136,11 @@ steps:
       inlineScript: |
         az containerapp create --name myApp --resource-group myResourceGroup --image $(ACR_NAME).azurecr.io/myapp:$(Build.BuildId) --environment myEnv
 ```
-3. **Integrate ACR with Azure Pipelines:** Configure a service connection in Azure DevOps to securely authenticate with your Azure Container Registry.
+1. **Integrate ACR with Azure Pipelines:** Configure a service connection in Azure DevOps to securely authenticate with your Azure Container Registry.
 
 ### Best Practices for Secure Deployment
 - Use secrets and environment variables within the pipeline to handle sensitive information securely.
-- Implement approval checks in the pipeline to review changes before deploying to production. {: .prompt-tip }
+- Implement approval checks in the pipeline to review changes before deploying to production.  
 
 ## Section 5: Managing and Scaling Containerized Apps in Azure
 
@@ -184,13 +185,13 @@ Feel free to explore more advanced topics, integrate other Azure services, and t
 ## Frequently Asked Questions (FAQs)
 
 ### 1. Can I use other container registries with Azure Container Apps?
-Yes, Azure Container Apps can work with other container registries such as Docker Hub and private registries. However, you must configure appropriate access credentials and permissions to enable secure pulls from these registries. {: .prompt-tip }
+Yes, Azure Container Apps can work with other container registries such as Docker Hub and private registries. However, you must configure appropriate access credentials and permissions to enable secure pulls from these registries. 
 
 ### 2. How is Azure Container Apps different from Azure Kubernetes Service (AKS)?
 Azure Container Apps is a fully managed serverless container platform that abstracts much of the complexity of Kubernetes management, such as cluster provisioning, scaling, and maintenance. AKS, on the other hand, provides a more comprehensive Kubernetes experience, allowing for more control over container orchestration, custom scaling rules, and networking configurations. Use Azure Container Apps for simpler, serverless deployments, and AKS for complex, large-scale, Kubernetes-based microservices architectures.{: .prompt-tip }
 
 ### 3. Is it possible to deploy multi-container applications in Azure Container Apps?
-Yes, Azure Container Apps supports multi-container applications. You can define multiple containers within a single application and specify inter-container communication, shared storage, and scaling rules. {: .prompt-tip }
+Yes, Azure Container Apps supports multi-container applications. You can define multiple containers within a single application and specify inter-container communication, shared storage, and scaling rules. 
 
 ### 4. Can I run background tasks or event-driven processing in Azure Container Apps?
-Yes, you can use the integrated Kubernetes Event-driven Autoscaler (KEDA) in Azure Container Apps to handle background processing and event-driven workloads. KEDA allows scaling your applications based on events from sources like Azure Service Bus, Azure Queue Storage, HTTP triggers, and more. {: .prompt-tip }
+Yes, you can use the integrated Kubernetes Event-driven Autoscaler (KEDA) in Azure Container Apps to handle background processing and event-driven workloads. KEDA allows scaling your applications based on events from sources like Azure Service Bus, Azure Queue Storage, HTTP triggers, and more. 
