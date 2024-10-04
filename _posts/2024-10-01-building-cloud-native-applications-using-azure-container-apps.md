@@ -26,7 +26,7 @@ This guide aims to provide DevOps engineers and software developers with a detai
 ### What Are Azure Container Apps?
  Azure Container Apps is a serverless container service provided by Microsoft Azure that simplifies the deployment and operation of microservices and containerized applications. It is designed to host containers without the need to manage the underlying infrastructure. This is especially useful for applications that require scalability, resilience, and rapid iteration. 
 
- [!INFO] Azure Container Apps is ideal for developers looking to deploy microservices or event-driven processing without dealing with the complexities of Kubernetes. It abstracts infrastructure management, allowing you to focus on building and deploying your apps.
+ [!INFO] Azure Container Apps is ideal for developers looking to deploy microservices or event-driven processing without dealing with the complexities of Kubernetes. It abstracts infrastructure management, allowing you to focus on building and deploying your apps. .
 
  With Azure Container Apps, you can:
 - Run application containers in a fully managed environment.
