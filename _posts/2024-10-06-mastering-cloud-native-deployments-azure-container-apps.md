@@ -339,7 +339,7 @@ With the Azure Key Vault set up and access policies configured, the next step is
 
 ---
 
-# 3.3 Configure Environment Variables
+## 3.3 Configure Environment Variables
 
 Environment variables allow you to inject configuration settings into your containerized application without modifying the codebase. This part focuses on setting up environment variables in your Azure Pipeline.
 
@@ -347,20 +347,23 @@ Environment variables allow you to inject configuration settings into your conta
 
 1. **Define Environment Variables in the YAML File:**
    - In your pipeline YAML file, you can define environment variables that will be passed to the container during deployment. Here’s how to set an environment variable:
+
      ```yaml
      - script: |
          echo "##vso[task.setvariable variable=DATABASE_URL]$(DatabaseUrl)"
        displayName: 'Set Database URL Environment Variable'
      ```
+
    - Replace `DatabaseUrl` with the appropriate secret or configuration value.
 
-2. **Use Environment Variables in Your Application:**
+
+1. **Use Environment Variables in Your Application:**
    - In your application code, access the environment variables using the standard method for your programming language:
      - For **Java**, use `System.getenv("DATABASE_URL")`.
      - For **Python**, use `os.environ.get("DATABASE_URL")`.
      - For **Node.js**, use `process.env.DATABASE_URL`.
 
-3. **Pass Environment Variables to the Container:**
+2. **Pass Environment Variables to the Container:**
    - To pass these variables to your Azure Container App, use the `az containerapp update` command in the pipeline:
      ```yaml
      - task: AzureCLI@2
