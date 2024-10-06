@@ -228,6 +228,7 @@ With the container image built and pushed to the Azure Container Registry, the n
 
 1. **Add the Azure CLI Task to the YAML File:**
    - In the same pipeline YAML file, add a new task using `AzureCLI@2` to deploy the container image to your Azure Container App:
+  
      ```yaml
        - task: AzureCLI@2
          displayName: 'Deploy to Azure Container Apps'
@@ -240,6 +241,7 @@ With the container image built and pushed to the Azure Container Registry, the n
                                    --resource-group YourResourceGroupName \
                                    --image YourACRName.azurecr.io/$(Build.Repository.Name):$(Build.BuildId)
      ```
+
    - Replace the placeholders:
      - `YourAzureSubscription`: The name of the Azure subscription in use.
      - `YourContainerAppName`: The name of the container app you want to update.
@@ -303,6 +305,7 @@ With the Azure Key Vault set up and access policies configured, the next step is
 
 1. **Add the Azure Key Vault Task to the YAML File:**
    - In your pipeline YAML file, add a task that retrieves secrets from Azure Key Vault using the `AzureKeyVault@2` task. Here’s an example configuration:
+  
      ```yaml
      - task: AzureKeyVault@2
        displayName: 'Fetch secrets from Azure Key Vault'
@@ -312,6 +315,7 @@ With the Azure Key Vault set up and access policies configured, the next step is
          secretsFilter: '*'
          runAsPreJob: true
      ```
+
    - Replace `YourAzureSubscription` with your Azure subscription's name and `YourKeyVaultName` with the name of the Key Vault you created.
 
 2. **Use Secrets in the Pipeline:**
@@ -659,11 +663,27 @@ Azure Container Apps simplifies the complexity of deploying, managing, and scali
 
 ## Achievement: Guided Project Completion
 
-I have completed the "Deploy and manage a container app using Azure Container Apps" guided project. Here is the badge I earned upon completion:
+I have completed the "Deploy and manage a container app using Azure Container Apps" guided project. Here is the trophy I earned upon completion:
 
-![Azure Container Apps Project Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)
+![Azure Container Apps Project Trophy](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B)
 
-You can verify this achievement [here](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B).
+You can verify this achievement [here](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B).
+
+## Modules Completed
+Here are the individual modules I completed as part of this guided project:
+
+[![Module 1 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B)
+
+[![Module 2 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B)
+
+[![Module 3 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B)
+
+[![Module 4 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B)
+
+[![Module 5 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B)
+
+[![Module 6 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)
+
 
 ---
 
