@@ -304,8 +304,9 @@ With the Azure Key Vault set up and access policies configured, the next step is
 ### Steps to Integrate Azure Key Vault in the Pipeline
 
 1. **Add the Azure Key Vault Task to the YAML File:**
-   - In your pipeline YAML file, add a task that retrieves secrets from Azure Key Vault using the `AzureKeyVault@2` task. Here’s an example configuration:
-  
+   - In your pipeline YAML file, add a task that retrieves secrets from Azure Key Vault using the `AzureKeyVault@2` task.
+   - Here’s an example configuration:
+
      ```yaml
      - task: AzureKeyVault@2
        displayName: 'Fetch secrets from Azure Key Vault'
@@ -317,6 +318,7 @@ With the Azure Key Vault set up and access policies configured, the next step is
      ```
 
    - Replace `YourAzureSubscription` with your Azure subscription's name and `YourKeyVaultName` with the name of the Key Vault you created.
+
 
 2. **Use Secrets in the Pipeline:**
    - Once the secrets are fetched, you can use them as environment variables in the pipeline. For example:
