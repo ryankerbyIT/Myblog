@@ -665,27 +665,45 @@ Azure Container Apps simplifies the complexity of deploying, managing, and scali
 
 ## Achievement: Guided Project Completion
 
+## Achievement: Guided Project Completion
+
 I have completed the "Deploy and manage a container app using Azure Container Apps" guided project. Here is the trophy I earned upon completion:
 
-![Azure Container Apps Project Trophy](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B)
-
-You can verify this achievement [here](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B).
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
 ## Modules Completed
+
 Here are the individual modules I completed as part of this guided project:
 
-[![Module 1 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B)
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
-[![Module 2 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B)
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
-[![Module 3 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B)
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
-[![Module 4 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B)
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
-[![Module 5 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B)
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
-[![Module 6 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)
+<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
 
+
+## Achievement: Guided Project Completion
+
+I have completed the "Deploy and manage a container app using Azure Container Apps" guided project. Here is the trophy I earned upon completion:
+
+- [Trophy for Guided Project Completion](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B)
+
+## Modules Completed
+
+Here are the individual modules I completed as part of this guided project:
+
+- [Module 1 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B)
+- [Module 2 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B)
+- [Module 3 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B)
+- [Module 4 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B)
+- [Module 5 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B)
+- [Module 6 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)
 
 ---
 
