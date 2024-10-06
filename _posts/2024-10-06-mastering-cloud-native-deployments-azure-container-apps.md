@@ -665,31 +665,6 @@ Azure Container Apps simplifies the complexity of deploying, managing, and scali
 
 ## Achievement: Guided Project Completion
 
-## Achievement: Guided Project Completion
-
-I have completed the "Deploy and manage a container app using Azure Container Apps" guided project. Here is the trophy I earned upon completion:
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-## Modules Completed
-
-Here are the individual modules I completed as part of this guided project:
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/B6LG5BKD?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/FVZEP9ZX?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/J96HVUNT?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-<iframe src="https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B" width="200" height="200" style="border:none;"></iframe>
-
-
-## Achievement: Guided Project Completion
-
 I have completed the "Deploy and manage a container app using Azure Container Apps" guided project. Here is the trophy I earned upon completion:
 
 - [Trophy for Guided Project Completion](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ZKPGG332?sharingId=832434226F60339B)
@@ -704,6 +679,7 @@ Here are the individual modules I completed as part of this guided project:
 - [Module 4 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/HAY2L2Z8?sharingId=832434226F60339B)
 - [Module 5 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/UYF7GG93?sharingId=832434226F60339B)
 - [Module 6 Badge](https://learn.microsoft.com/api/achievements/share/en-us/RyanKerby-2350/ESJ33FNP?sharingId=832434226F60339B)
+
 
 ---
 
@@ -735,7 +711,8 @@ Here are some resources that provide additional information on the topics covere
 8. **Microsoft Learn Modules:**  
    Explore more in-depth guides and hands-on tutorials: [https://learn.microsoft.com/en-us/training/](https://learn.microsoft.com/en-us/training/)
 
-> **Note:** Refer to the official Azure documentation for the latest information, best practices, and updates related to Azure Container Apps and other Azure services.{:.prompt-warning}
+> **Note:** Refer to the official Azure documentation for the latest information, best practices, and updates related to Azure Container Apps and other Azure services.
+{:.prompt-warning}
 
 
 
