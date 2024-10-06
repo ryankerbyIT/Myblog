@@ -29,6 +29,7 @@ By the end of this guide, you'll have a deep understanding of how to:
 This study guide breaks down each task in the assessment lab, providing detailed instructions, useful tips, and supplemental resources to help you succeed. **Let's dive into the first key task: configuring a secure connection between an Azure Container Registry and Azure Container Apps.**
 
 > **Tip:** For beginners, it's important to understand the core concepts of containerization, Docker, and Kubernetes. If you're not familiar with these, consider exploring Microsoft's [Introduction to Containers](https://learn.microsoft.com/en-us/azure/container-instances/container-instances-overview) before proceeding with this guide.
+{:.prompt-tip}
 
 ### Purpose of this Document
 The purpose of this study guide is to provide an overview of the topics covered in the Azure Container Apps assessment lab. Each section provides a concise summary of key tasks, configuration steps, and best practices. Alongside each section, you'll find additional resources to reinforce your learning and help you gain a holistic understanding of deploying cloud-native apps in Azure.
@@ -52,6 +53,7 @@ A managed identity allows Azure services to authenticate and access other Azure 
    - Select **ACRPull** as the role and assign it to the managed identity created in the previous step. This grants your container app the necessary permissions to pull images securely from ACR.
 
 > **Tip:** Always use managed identities to avoid hard-coding credentials in your application, enhancing security and simplifying identity management.
+{:.prompt-tip}
 
 ## 1.2 Configure ACRpull Permissions for the Managed Identity
 After creating the managed identity and granting basic permissions, you'll need to configure specific ACRpull permissions:
@@ -66,6 +68,7 @@ After creating the managed identity and granting basic permissions, you'll need 
    - Use the `az acr login` command to verify that the managed identity can access the ACR without manual credentials.
 
 > **Tip:** If you encounter permission issues during this step, ensure the managed identity is correctly assigned to the ACRpull role. Double-check that the permissions have propagated, which may take a few minutes after initial assignment.
+{:.prompt-tip}
 
 ## 1.3 Configure Private Endpoints
 Private endpoints allow your container app to connect securely to the Azure Container Registry through an Azure virtual network. This step further enhances the security of your deployment.
@@ -81,12 +84,14 @@ Private endpoints allow your container app to connect securely to the Azure Cont
    - Ensure that the DNS settings are configured correctly for the private endpoint.
 
 > **Info:** Configuring private endpoints ensures that traffic between your container app and the ACR remains within the Azure network, avoiding exposure to the public internet and enhancing security.
+{:.prompt-info}
 
 3. **Test Private Endpoint Connectivity:**
    - After configuring the private endpoint, test the connectivity by deploying a container from the ACR to your Azure Container App.
    - Use tools like `curl` or `wget` within the container app environment to verify access to the ACR's private IP.
 
 > **Tip:** Regularly audit your private endpoint configurations to ensure they are up-to-date and securely configured. Remove any unnecessary private endpoints to minimize potential attack surfaces.
+{:.prompt-tip}
 
 ## Supporting Modules
 - **Configure Azure Container Registry for Container App Deployments:** This module on Microsoft Learn offers a detailed walkthrough on setting up your ACR for secure container app deployments. Check it out for more in-depth information.
@@ -108,6 +113,7 @@ An environment is a secure boundary within which your container apps operate, sh
    - Configure the **Network** settings as required. You can select between a virtual network and a public network based on your app's needs.
 
 > **Tip:** Choose the region closest to your target users to minimize latency and enhance app performance.
+{:.prompt-tip}
 
 ## 2.2 Create a Container App
 After setting up the environment, you need to create the container app itself.
@@ -124,6 +130,7 @@ After setting up the environment, you need to create the container app itself.
    - Add any necessary environment variables under the **Environment Variables** section. These variables allow you to pass configuration information to the container at runtime.
 
 > **Info:** Environment variables are a crucial way to inject runtime configurations into your container, enabling flexibility without altering the codebase.
+{:.prompt-info}
 
 ## 2.3 Add Services to the Environment
 In a container app environment, you can add various services, such as databases, message queues, or other microservices, to enhance the app's functionality.
@@ -137,6 +144,7 @@ In a container app environment, you can add various services, such as databases,
    - Update your container app to use the service. For example, add the database connection string as an environment variable or as a secret (discussed later) for secure access.
 
 > **Tip:** Use Azure's managed services for common app components like databases and storage to simplify maintenance and scale efficiently.
+{:.prompt-tip}
 
 ## 2.4 Configure Ingress for Services
 Ingress controls how traffic is routed to your container app. By default, the container app is private, but you can expose it to the internet using ingress.
@@ -151,6 +159,7 @@ Ingress controls how traffic is routed to your container app. By default, the co
    - Choose the protocol (HTTP, HTTPS, or TCP) based on your app’s requirements.
 
 > **Info:** Use HTTPS for production environments to encrypt traffic and secure user data. Azure provides a built-in way to configure custom domains and TLS certificates for enhanced security.
+{:.prompt-info}
 
 ## 2.5 Configure Secrets and Storage
 Secrets and storage help manage sensitive information and persist data across container restarts.
@@ -165,6 +174,7 @@ Secrets and storage help manage sensitive information and persist data across co
    - Mount the storage to a path within your container app to persist data across restarts.
 
 > **Tip:** Regularly rotate secrets and use Azure Key Vault to securely manage and automate secret handling. This ensures sensitive information is protected.
+{:.prompt-info}
 
 ## Supporting Modules
 - **Configure a Container App in Azure Container Apps:** For more detailed guidance on creating and configuring container apps, explore the relevant module in Microsoft Learn.
@@ -205,6 +215,7 @@ The first part of setting up continuous integration involves creating a deployme
    - Replace `YourACRName` with the name of your Azure Container Registry.
 
 > **Tip:** Make sure your Dockerfile is correctly set up in the root of your repository for the build task to find it.
+{:.prompt-tip}
 
 3. **Run the Pipeline:**
    - Save the YAML file and run the pipeline. This will build the container image and push it to the Azure Container Registry.
@@ -240,6 +251,7 @@ With the container image built and pushed to the Azure Container Registry, the n
    - Run the pipeline again to update the Azure Container App with the new image from the container registry.
 
 > **Tip:** You can use this deployment task to update the container app with different versions of your app by modifying the image tag. The `$(Build.BuildId)` tag is automatically generated to track different builds.
+{:.prompt-tip}
 
 ---
 
@@ -265,6 +277,7 @@ Azure Key Vault is a cloud service for securely storing and accessing secrets, s
    - Click **Create** to store the secret.
 
 > **Tip:** Use descriptive names for your secrets to make it easy to identify them in your application code or pipeline.
+{:.prompt-tip}
 
 Now that you've created a Key Vault and added secrets, the next step is to allow Azure Pipelines to access these secrets for use in your container app deployment pipeline.
 
@@ -279,6 +292,7 @@ Now that you've created a Key Vault and added secrets, the next step is to allow
    - Click **Add** and then **Save** to apply the access policy.
 
 > **Tip:** Always provide the least privileges necessary. For example, granting only **Get** permission ensures that Azure Pipelines can retrieve secrets but not modify them.
+{:.prompt-tip}
 
 2. **Verify Access:**
    - Once the access policy is applied, Azure Pipelines should have the necessary permissions to access the secrets stored in the Key Vault.
@@ -310,11 +324,13 @@ With the Azure Key Vault set up and access policies configured, the next step is
    - Replace `DatabasePassword` with the name of the secret you created in Key Vault.
 
 > **Tip:** Avoid echoing sensitive information like passwords in the pipeline output for security reasons. This example is for demonstration purposes only.
+{:.prompt-tip}
 
 3. **Verify the Integration:**
    - Save the YAML file and run the pipeline to ensure it can successfully retrieve and use the secrets from the Key Vault.
 
 > **Info:** Using Azure Key Vault in the pipeline ensures that sensitive information like API keys, passwords, and connection strings are securely managed, reducing the risk of exposure.
+{:.prompt-info}
 
 ---
 
@@ -356,11 +372,13 @@ Environment variables allow you to inject configuration settings into your conta
    - Replace `YourAzureSubscription`, `YourContainerAppName`, and `YourResourceGroupName` with their actual values.
 
 > **Tip:** Make sure to use consistent naming for environment variables across your codebase and pipeline to avoid configuration issues.
+{:.prompt-tip}
 
 4. **Verify Environment Variable Configuration:**
    - Save the YAML file and run the pipeline to ensure that the environment variables are correctly set and passed to the container app.
 
 > **Info:** Configuring environment variables in this manner allows you to manage settings dynamically without the need to alter the application code for each deployment.
+{:.prompt-info}
 
 ---
 
@@ -390,6 +408,7 @@ HTTP scale rules allow your container app to handle varying levels of web traffi
    - Click **Save** to apply the HTTP scaling rule to your container app.
 
 > **Tip:** Monitor your app's performance using Azure Monitor to adjust the concurrency settings and instance limits based on real traffic patterns.
+{:.prompt-tip}
 
 In addition to HTTP scaling, you can configure TCP scale rules to manage applications that use TCP connections, such as chat applications, real-time services, or IoT solutions.
 
@@ -415,6 +434,7 @@ TCP scale rules adjust the number of container instances based on the number of 
    - Click **Save** to apply the TCP scaling rule to your container app.
 
 > **Info:** TCP scaling is particularly useful for applications that rely on persistent connections, like real-time data processing or communication services. Adjust the connection threshold based on your app's performance and requirements.
+{:.prompt-info}
 
 # Section 4: Scale a Deployed App in Azure Container Apps – Part 3
 
@@ -452,6 +472,7 @@ Custom scale rules use **KEDA (Kubernetes-based Event Driven Autoscaling)** to d
    - Click **Save** to apply the custom scaling rule to your container app.
 
 > **Tip:** Custom scale rules give you fine-grained control over scaling behavior, allowing you to tailor it to your app's specific workload. Use metrics from Azure Monitor to help define appropriate trigger parameters.
+{:.prompt-tip}
 
 ---
 
@@ -480,6 +501,7 @@ A staging environment is a replica of your production environment where you can 
    - Test the application in the staging environment to verify that the changes work as intended.
 
 > **Tip:** Always test new changes in the staging environment before deploying to production. This minimizes the risk of introducing bugs or downtime in the production environment.
+{:.prompt-tip}
 
 Azure Container Apps support different revision modes that allow you to manage how new versions of your application are deployed and how traffic is routed between these revisions. This part covers how to choose the appropriate revision mode for your app.
 
@@ -505,11 +527,13 @@ Choosing the right revision mode is crucial for managing deployments, testing ne
    - Select the desired revision mode and click **Save** to apply the changes.
 
 > **Info:** It’s recommended to use **Multiple Revision Mode** for production environments where you need flexibility in managing deployments, traffic splitting, and rollbacks.
+{:.prompt-info}
 
 4. **Verify the Revision Mode:**
    - Ensure that the selected revision mode aligns with your deployment strategy and application requirements.
 
 > **Tip:** If you're starting with a new application or testing features, use **Multiple Revision Mode** to gain more control over how new changes are introduced to users.
+{:.prompt-tip}
 
 Creating new revisions in Azure Container Apps allows you to implement updates and changes while keeping the previous version intact. This part covers how to create a new revision whenever you deploy an update to your application.
 
@@ -541,8 +565,10 @@ In **Multiple Revision Mode**, each deployment creates a new revision of your co
    - If you are using traffic splitting (covered in the next section), route a portion of the traffic to the new revision to test its performance and behavior.
 
 > **Info:** Each new revision is immutable, meaning once it is created, you cannot modify it. This approach allows you to safely test new changes and roll back to a previous stable revision if needed.
+{:.prompt-info}
 
 > **Tip:** Use descriptive tags or notes for each revision during deployment to make it easy to identify changes and track different versions of your app.
+{:.prompt-tip}
 
 Traffic splitting allows you to control how much traffic each revision of your application receives. This enables you to perform A/B testing, canary deployments, or gradually roll out new features in a controlled manner.
 
@@ -571,11 +597,13 @@ With traffic splitting, you can manage and monitor the rollout of new revisions 
    - If the new revision performs well, gradually increase its traffic allocation until it reaches 100%. Conversely, if issues arise, reduce its traffic or route all traffic back to the stable revision.
 
 > **Tip:** Traffic splitting is especially useful when you want to test new features with a small subset of users (canary releases) or conduct A/B testing to evaluate different versions of your application.
+{:.prompt-tip}
 
 5. **Roll Back if Necessary:**
    - If you encounter problems with the new revision, you can quickly adjust the traffic settings to route 100% of the traffic back to the previous stable revision.
 
 > **Info:** Traffic splitting offers a flexible way to safely test changes in a live environment, ensuring that new revisions do not negatively impact user experience.
+{:.prompt-info}
 
 ---
 
@@ -598,6 +626,7 @@ Here’s a quick recap of the key topics covered in this study guide:
 5. **Manage Revisions:** Using revisions and traffic splitting in Azure Container Apps enables safe deployments, A/B testing, and quick rollbacks, helping to maintain a stable production environment.
 
 > **Info:** The modular nature of Azure Container Apps allows you to mix and match services, scaling strategies, and deployment approaches to meet the unique needs of your application. Always tailor these configurations to suit your app's workload and user requirements.
+{:.prompt-info}
 
 ## Additional Tips for Real-World Deployments
 
@@ -624,6 +653,7 @@ With this comprehensive overview, you're now well-prepared to deploy cloud-nativ
 Azure Container Apps simplifies the complexity of deploying, managing, and scaling cloud-native applications. By utilizing the features and best practices discussed in this guide, you can build resilient, secure, and high-performing container apps that adapt to changing demands.
 
 > **Tip:** Continuously improve your deployment strategy. Regularly review logs, performance metrics, and user feedback to fine-tune configurations and enhance your application's reliability and user experience.
+{:.prompt-tip}
 
 ---
 
@@ -665,7 +695,7 @@ Here are some resources that provide additional information on the topics covere
 8. **Microsoft Learn Modules:**  
    Explore more in-depth guides and hands-on tutorials: [https://learn.microsoft.com/en-us/training/](https://learn.microsoft.com/en-us/training/)
 
-> **Note:** Refer to the official Azure documentation for the latest information, best practices, and updates related to Azure Container Apps and other Azure services.
+> **Note:** Refer to the official Azure documentation for the latest information, best practices, and updates related to Azure Container Apps and other Azure services.{:.prompt-warning}
 
 
 
