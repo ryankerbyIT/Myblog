@@ -2,7 +2,7 @@
 title: "Hands-On with Azure Container Apps: A Guided Project for Cloud-Native Deployments"
 description: "Follow my step-by-step journey through a guided project on deploying and managing containerized applications using Azure Container Apps. Learn about secure connections, CI/CD with Azure Pipelines, scaling strategies, and revision management—all backed by real-world, hands-on experience."
 author: Ryan Kerby
-date: 2024-010-06 12:00:00 +0800
+date: 2024-10-06 12:00:00 +0800
 categories: [Projects, Credentials]
 tags: [Azure Container Apps, Cloud-Native, DevOps, Containerization, Azure DevOps, Continuous Integration, Azure Pipelines, Docker, Kubernetes, Azure Container Registry, Scaling, Revisions, Cloud Computing, CI/CD, Cloud Security, Microsoft Azure, Infrastructure as Code, App Deployment, Cloud Solutions, Managed Identity]
 pin: true
