@@ -308,7 +308,7 @@ With the Azure Key Vault set up and access policies configured, the next step is
    - Here’s an example configuration:
 
      ```yaml
-     - task: AzureKeyVault@2
+       task: AzureKeyVault@2
        displayName: 'Fetch secrets from Azure Key Vault'
        inputs:
          azureSubscription: 'YourAzureSubscription'
