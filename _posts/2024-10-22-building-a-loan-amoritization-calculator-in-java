@@ -4,8 +4,7 @@ description: "Learn how to build a Loan Amortization Calculator, handle user inp
 author: Ryan Kerby
 date: 2024-10-22 12:00:00 +0800
 categories: [Projects, Java]
-tags: [Java, Loan Amortization, OOP, Object-Oriented Programming, File Handling, Input Validation, Error Handling, Amortization Schedule, Java Project, Java Tutorial, Programming, Software Development, JOptionPane, Loan Calculator, Encapsulation, Constructors, Methods, Code Example, Java Coding, Java Learning, Software Engineering, Financial Calculator
-]
+tags: [Java, Loan Amortization, OOP, Object-Oriented Programming, File Handling, Input Validation, Error Handling, Amortization Schedule, Java Project, Java Tutorial, Programming, Software Development, JOptionPane, Loan Calculator, Encapsulation, Constructors, Methods, Code Example, Java Coding, Java Learning, Software Engineering, Financial Calculator]
 pin: true
 math: false
 mermaid: false
@@ -13,6 +12,7 @@ image:
   path: /assets/images/java-loan-calculator.jpg
   alt: "An abstract visual representation of programming The Game of Domineering in Java."
 ---
+
 # **Building a Loan Amortization Calculator in Java: A Complete Guide**
 
 ## **Introduction**
