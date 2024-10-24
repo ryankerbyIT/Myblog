@@ -65,43 +65,43 @@ Let’s break down each part of the project, starting with the **Amortization** 
 The `Amortization` class is where all the core calculations take place. This class includes fields for the loan amount, interest rate, loan term, monthly payment, and loan balance. The constructor of the class performs the loan calculation as soon as an instance is created.
 
 ```java
-    public class Amortization {
-    private double loanAmount;
-    private double interestRate;
-    private double loanBalance;
-    private double payment;
-    private int loanYears;
+  public class Amortization {
+      private double loanAmount;
+      private double interestRate;
+      private double loanBalance;
+      private double payment;
+      private int loanYears;
 
-    public Amortization(double loanAmount, double interestRate, int loanYears) {
-        this.loanAmount = loanAmount;
-        this.interestRate = interestRate;
-        this.loanYears = loanYears;
-        this.loanBalance = loanAmount;
-        calculateMonthlyPayment();
-    }
+      public Amortization(double loanAmount, double interestRate, int loanYears) {
+          this.loanAmount = loanAmount;
+          this.interestRate = interestRate;
+          this.loanYears = loanYears;
+          this.loanBalance = loanAmount;
+          calculateMonthlyPayment();
+      }
 
-    private void calculateMonthlyPayment() {
-        double monthlyRate = interestRate / 12;
-        int totalMonths = loanYears * 12;
-        double term = Math.pow(1 + monthlyRate, totalMonths);
-        payment = loanAmount * (monthlyRate * term) / (term - 1);
-    }
+      private void calculateMonthlyPayment() {
+          double monthlyRate = interestRate / 12;
+          int totalMonths = loanYears * 12;
+          double term = Math.pow(1 + monthlyRate, totalMonths);
+          payment = loanAmount * (monthlyRate * term) / (term - 1);
+      }
 
-    public void saveReport(String fileName) {
-        try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
-            writer.println("Month\tInterest\tPrincipal\tBalance");
-            double balance = loanAmount;
-            for (int month = 1; month <= loanYears * 12; month++) {
-                double interest = balance * (interestRate / 12);
-                double principal = payment - interest;
-                balance -= principal;
-                writer.printf("%d\t%.2f\t%.2f\t%.2f\n", month, interest, principal, balance);
-            }
-        } catch (IOException e) {
-            System.err.println("Error saving report: " + e.getMessage());
-        }
+      public void saveReport(String fileName) {
+          try (PrintWriter writer = new PrintWriter(new FileWriter(fileName))) {
+              writer.println("Month\tInterest\tPrincipal\tBalance");
+              double balance = loanAmount;
+              for (int month = 1; month <= loanYears * 12; month++) {
+                  double interest = balance * (interestRate / 12);
+                  double principal = payment - interest;
+                  balance -= principal;
+                  writer.printf("%d\t%.2f\t%.2f\t%.2f\n", month, interest, principal, balance);
+              }
+          } catch (IOException e) {
+              System.err.println("Error saving report: " + e.getMessage());
+          }
+      }
     }
-  }
 ```
 
 ### **Explanation:**
