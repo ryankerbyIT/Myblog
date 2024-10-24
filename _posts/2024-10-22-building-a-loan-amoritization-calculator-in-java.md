@@ -35,8 +35,8 @@ Using these inputs, the program calculates the monthly payment and generates a m
 
 The project consists of two main classes:
 
-1. **Amortization.java** – This class is responsible for the core loan calculations and the generation of the amortization schedule.
-2. **LoanReport.java** – This class handles the user interface, input validation, and prompts the user for loan details. It also calls the `Amortization` class to generate the report and display key details.
+1. **`Amortization.java`** – This class is responsible for the core loan calculations and the generation of the amortization schedule.
+2. **`LoanReport.java`** – This class handles the user interface, input validation, and prompts the user for loan details. It also calls the `Amortization` class to generate the report and display key details.
 
 ## **What You Will Learn**
 
