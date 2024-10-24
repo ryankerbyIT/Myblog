@@ -104,13 +104,14 @@ The `Amortization` class is where all the core calculations take place. This cla
   }
 ```
 
-### *Explanation:**
+### **Explanation:**
 
 - The `Amortization` class uses encapsulation to store loan data. The fields (loan amount, interest rate, etc.) are all private, and only accessible through the class's methods.
 - The constructor initializes the loan amount, interest rate, and loan term, and automatically calls the method `calculateMonthlyPayment` to compute the monthly payment.
 - The `saveReport` method generates the amortization schedule and saves it to a text file, handling any file-related errors using a try-with-resources block for safe file handling.
 
 > **Tip**: Handling file-related exceptions carefully ensures that users are informed if the report can’t be saved.
+{:.prompt-tip}
 
 ---
 
@@ -176,6 +177,7 @@ This class manages user interaction, gathering input, and creating instances of 
 - Looping: The `do-while` loop allows the user to generate multiple reports without restarting the program.
 
 > **Info**: `JOptionPane` is part of the `javax.swing` package and is a simple way to create user-friendly dialogs without building a full graphical user interface (GUI).
+> {:.prompt-info}
 
 ## **Error Handling**
 
