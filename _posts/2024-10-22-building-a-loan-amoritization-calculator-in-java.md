@@ -60,7 +60,7 @@ This project teaches several important programming skills that are fundamental t
 
 Let’s break down each part of the project, starting with the **Amortization** class.
 
-### **1. The Amortization Class**
+## **1. The Amortization Class**
 
 The `Amortization` class is where all the core calculations take place. This class includes fields for the loan amount, interest rate, loan term, monthly payment, and loan balance. The constructor of the class performs the loan calculation as soon as an instance is created.
 
@@ -177,7 +177,7 @@ This class manages user interaction, gathering input, and creating instances of 
 - Looping: The `do-while` loop allows the user to generate multiple reports without restarting the program.
 
 > **Info**: `JOptionPane` is part of the `javax.swing` package and is a simple way to create user-friendly dialogs without building a full graphical user interface (GUI).
-> {:.prompt-info}
+{:.prompt-info}
 
 ## **Error Handling**
 
