@@ -3,7 +3,7 @@ title: "Building a Scalable Weather API Gateway with Azure API Management"
 description: "Learn how to design and document a scalable weather API gateway using Azure API Management. This guide walks you through simulating the setup process, implementing key features like caching and rate limiting, and creating professional documentation to showcase your skills."
 author: Ryan Kerby
 date: 2025-01-14 12:00:00 +0800
-categories: [Projects, Algorithms]
+categories: [Projects, DevOps]
 tags: [Azure API Management, Weather API, OpenWeather API, API Gateway, API Design, API Policies, API Documentation, Azure Developer, Cloud Integration, Scalable APIs, API Testing, Developer Guide]
 pin: true
 math: false

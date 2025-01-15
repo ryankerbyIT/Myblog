@@ -3,7 +3,7 @@ title: "Building a Scalable and Secure API Gateway with Azure API Management and
 description: "Learn how to design and deploy a scalable, secure API gateway using Azure API Management and Bicep. This guide covers step-by-step implementation, best practices, and future-ready enhancements for modern cloud architectures."
 author: Ryan Kerby
 date: 2025-01-15 12:00:00 +0800
-categories: [Projects, Algorithms]
+categories: [Projects, DevOps]
 tags: [Azure API Management, Azure Bicep, Infrastructure as Code, API Gateway, Cloud Architecture, Azure Key Vault, Application Insights, Scalable APIs, Secure APIs, API Policies, Multi-Region Deployment, DevOps, Cloud Security, API Monitoring, IoT Integration]
 pin: true
 math: false
