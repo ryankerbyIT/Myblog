@@ -9,7 +9,7 @@ pin: true
 math: false
 mermaid: false
 image:
-  path: /assets/images/azure-api-management-demo.jpg
+  path: /assets/images/bicep-iac-apim-azure.jpg
   alt: "llustration of an API gateway connecting weather data providers to users, highlighting scalability, security, and integration with Azure API Management."
 ---
 
