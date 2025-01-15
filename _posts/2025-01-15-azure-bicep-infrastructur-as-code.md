@@ -83,7 +83,8 @@ Adopting IaC with Bicep over manual deployment methods offers several advantages
 
 ![Benefits of IaC with Bicep](/assets/images/benefits_iac_bicep.png)
 
-This project highlights these benefits by demonstrating how to automate, scale, and manage cloud infrastructure effectively.
+**info**: This project highlights these benefits by demonstrating how to automate, scale, and manage cloud infrastructure effectively.
+{:.prompt-info}
 
 ---
 
@@ -112,7 +113,8 @@ This project highlights several key cloud engineering skills:
 - Integrating Application Insights for real-time monitoring and diagnostics.
 - Securing sensitive information like API keys using Azure Key Vault.
 
-The goal is to deliver a reliable and scalable solution that can be extended for real-world applications, demonstrating both practical expertise and best practices in cloud architecture.
+**info**: The goal is to deliver a reliable and scalable solution that can be extended for real-world applications, demonstrating both practical expertise and best practices in cloud architecture.
+{:.prompt-info}
 
 ---
 
@@ -139,7 +141,8 @@ Below is a visual representation of the architecture:
 
 ![Architecture Overview of E-Commerce API Gateway](/assets/images/architecture_overview.png)
 
-This architecture ensures all components work seamlessly together to deliver a reliable API management solution.
+**info**: This architecture ensures all components work seamlessly together to deliver a reliable API management solution.
+{:.prompt-info}
 
 ---
 
@@ -180,7 +183,8 @@ Here’s a visual representation of this flow:
 
 ![Real-World Scenario: API Gateway Flow](/assets/images/real_world_api_flow.png)
 
-This scenario illustrates how the components work together to provide a secure and efficient user experience.
+**info**: This scenario illustrates how the components work together to provide a secure and efficient user experience.
+{:.prompt-info}
 
 ---
 
@@ -286,7 +290,8 @@ Here’s a diagram showing the initial configuration process:
 
 ---
 
-By ensuring your development environment is set up correctly and understanding the project’s structure and deployment process, you’ll be ready to move on to the next steps: implementing the API gateway and configuring its features.
+**info**: By ensuring your development environment is set up correctly and understanding the project’s structure and deployment process, you’ll be ready to move on to the next steps: implementing the API gateway and configuring its features.
+{:.prompt-info}
 
 ---
 
@@ -330,7 +335,8 @@ Once the API Management instance is deployed, the next step is configuring essen
 3. **Authentication**:
    - Enforce access control using Azure Active Directory (AD) or subscription keys.
 
-Each policy is applied to specific APIs defined in the API Management instance.
+**tip**: Each policy is applied to specific APIs defined in the API Management instance.
+{:.prompt-tip}
 
 ---
 
@@ -367,7 +373,8 @@ This flow is visualized in the diagram below:
 
 ---
 
-By following these steps and referencing the provided diagrams, you can successfully deploy and configure a scalable API gateway in Azure. This implementation not only automates resource provisioning but also ensures a secure and efficient system for managing APIs.
+**info**: By following these steps and referencing the provided diagrams, you can successfully deploy and configure a scalable API gateway in Azure. This implementation not only automates resource provisioning but also ensures a secure and efficient system for managing APIs.
+{:.prompt-info}
 
 ---
 
@@ -460,7 +467,8 @@ The diagram below illustrates the optimized architecture:
 
 ---
 
-By addressing these challenges and implementing the lessons learned, the project not only delivered a robust API gateway but also established a framework for future success.
+**info**: By addressing these challenges and implementing the lessons learned, the project not only delivered a robust API gateway but also established a framework for future success.
+{:.prompt-info}
 
 ---
 
@@ -539,7 +547,8 @@ The diagram below showcases these extended use cases:
 
 ---
 
-By following this roadmap, implementing multi-region architectures, and exploring extended use cases, the API gateway can evolve into a highly scalable, secure, and versatile solution. This ensures it remains future-proof and ready to meet the demands of a rapidly changing technological landscape.
+**info**: By following this roadmap, implementing multi-region architectures, and exploring extended use cases, the API gateway can evolve into a highly scalable, secure, and versatile solution. This ensures it remains future-proof and ready to meet the demands of a rapidly changing technological landscape.
+{:.prompt-info}
 
 ---
 
