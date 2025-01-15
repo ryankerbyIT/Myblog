@@ -3,7 +3,7 @@ title: Introduction to Encapsulation
 description: Definition of Encapsulation in Object-Oriented Programming (OOP)
 author: Ryan Kerby
 date: 2024-09-26 12:00:00 +0800
-categories: [Blogging, Software Engineering]
+categories: [Blogging, Development]
 tags: [Encapsulation, Programming, Data Structures And Algorithms]
 pin: true
 math: false

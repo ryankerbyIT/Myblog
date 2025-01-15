@@ -3,7 +3,7 @@ title: "Building the Game of Domineering in Java: A Deep Dive into Object-Orient
 description: "Domineering in Java: A Strategic Two-Player Game Built with Simple Data Structures and Object-Oriented Design."
 author: Ryan Kerby
 date: 2024-09-27 12:00:00 +0800
-categories: [Projects, Algorithms]
+categories: [Projects, Development]
 tags: [Java, Java Games, Programming, Clean Code, Object-Oriented Programming, Data Structures, Algorithms]
 pin: true
 math: false

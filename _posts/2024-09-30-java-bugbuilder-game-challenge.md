@@ -3,7 +3,7 @@ title: "Building Bug Builder: A Step-by-Step Guide to Developing a Java Game"
 description: Learn how to create a "Bug Builder" game in Java by starting with the basics and iterating through each development stage.
 author: Ryan Kerby
 date: 2024-09-26 12:00:00 +0800
-categories: [Projects, Algorithms]
+categories: [Projects, Development]
 tags: [Java, Java Games, Programming, Clean Code, Object-Oriented Programming]
 pin: true
 math: false
