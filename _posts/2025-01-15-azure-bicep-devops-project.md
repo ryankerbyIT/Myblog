@@ -10,95 +10,7 @@ math: false
 mermaid: false
 image:
   path: /assets/images/devops-bicep-iac-azure-automation.jpg
-  alt: "llustration of an API gateway connecting weather data providers to users, highlighting scalability, security, and integration with Azure API Management."
----
-
-# 1. Introduction
-
-Infrastructure as Code (IaC) is revolutionizing cloud resource management by enabling developers and engineers to define infrastructure in code. This approach brings consistency, efficiency, and scalability to cloud deployments, eliminating the risks and inefficiencies of manual provisioning.
-
-Azure Bicep, Microsoft’s declarative domain-specific language (DSL) for IaC, simplifies this process by providing a user-friendly and modular way to define Azure resources. In this blog, we’ll walk through a project that leverages Bicep to deploy a robust API Management gateway for an e-commerce application. The project showcases best practices in IaC, modular architecture, and API Management.
-
----
-
-## Why Azure Bicep?
-
-Azure Bicep was designed to address the complexities of JSON-based ARM templates by providing a concise, human-readable syntax. Here’s why Bicep is an excellent choice for this project:
-
-- **Simplified Syntax**: Bicep significantly reduces code complexity, making it easier to write and maintain.
-- **Modularity**: You can break deployments into reusable modules for improved organization and scalability.
-- **Native Integration**: Bicep compiles seamlessly into ARM templates and is fully supported by Azure.
-- **Enhanced Tooling**: Visual Studio Code offers rich support for Bicep, including IntelliSense, error detection, and resource schema validation.
-
-### Workflow of IaC with Bicep
-To understand how Bicep fits into the cloud provisioning lifecycle, consider the workflow below:
-
-![Workflow of IaC Using Bicep](/assets/images/workflow_iac_bicep.png)
-
-This flow demonstrates how Bicep templates are written, deployed using Azure CLI or DevOps pipelines, processed by Azure Resource Manager (ARM), and finally provisioned into Azure resources.
-
----
-
-## What is Azure API Management?
-
-Azure API Management (APIM) is a fully managed service that simplifies API publication, security, monitoring, and transformation. In this project, APIM will:
-
-- Act as a single entry point for client applications accessing backend APIs.
-- Enforce security policies such as rate-limiting and authentication.
-- Monitor and log API usage and performance with Application Insights.
-
-The diagram below illustrates the high-level architecture of Azure API Management:
-
-![Azure API Management High-Level Architecture](/assets/images/apim_architecture.png)
-
----
-
-## Why This Project?
-
-This project demonstrates critical skills for cloud engineers and developers, including:
-
-1. **IaC Expertise**: Learn how to define, deploy, and manage Azure resources with Bicep.
-2. **API Management Proficiency**: Gain practical experience configuring an API gateway with policies and monitoring.
-3. **Real-World Applicability**: Build a reusable and scalable solution for modern cloud applications.
-
-### Modular Deployment with Bicep
-
-The modular architecture allows us to break down deployments into smaller, reusable templates. Here’s a high-level look at how the project will be structured:
-
-![Modular Deployment Architecture](/assets/images/modular_architecture.png)
-
----
-
-## Real-World Use Case: API Gateway Flow
-
-In a real-world scenario, users interact with an API gateway that manages and routes requests to backend services while handling security and monitoring. Here’s an example flow for the project:
-
-![Real-World Use Case: API Gateway Flow](/assets/images/api_gateway_flow.png)
-
----
-
-## Benefits of IaC with Bicep
-
-Adopting IaC with Bicep over manual deployment methods offers several advantages:
-
-![Benefits of IaC with Bicep](/assets/images/benefits_iac_bicep.png)
-
-> **info**: This project highlights these benefits by demonstrating how to automate, scale, and manage cloud infrastructure effectively.
-{:.prompt-info}
-
----
-
-## Goals of This Blog
-
-By the end of this blog, you will:
-
-1. Understand how Azure Bicep simplifies IaC.
-2. Gain hands-on experience deploying a scalable API gateway.
-3. Learn best practices in API Management and IaC design.
-4. Walk away with reusable templates and skills to adapt to your projects.
-
-Let’s get started!
-
+  alt: "Futuristic digital representation of Azure cloud automation and Infrastructure as Code (IaC). The image features a vibrant blue and purple color palette with floating icons symbolizing virtual machines, storage, and networks. A glowing command-line interface and lines of code represent automation and scripting in the foreground. The background includes interconnected cloud nodes and visual elements depicting DevOps processes, emphasizing efficiency, scalability, and modern cloud practices."
 ---
 
 # Section 1: Setting the Foundation with Bicep for Modular Infrastructure as Code
@@ -156,7 +68,7 @@ The `main.bicep` file acts as the entry point for our project. It orchestrates t
 
 `main.bicep`
 
-```bicep
+```C#
 @description('Location for all resources')
 param location string = resourceGroup().location
 
