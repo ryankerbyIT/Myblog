@@ -2,7 +2,7 @@
 title: "Mastering Azure Automation: Deploying and Managing Infrastructure with Bicep and Azure Functions"
 description: "Discover how to streamline cloud resource management with Azure’s powerful tools. This comprehensive guide explores deploying modular Infrastructure as Code using Bicep, automating tasks with Azure Functions, and integrating these technologies for scalable, cost-efficient solutions. Perfect for aspiring DevOps professionals and cloud architects."
 author: Ryan Kerby
-date: 2025-01-15 12:00:00 +0800
+date: 2025-01-14 12:00:00 +0800
 categories: [Projects, DevOps]
 tags: [Azure, Azure Bicep, Infrastructure as Code, Azure Functions, Cloud Automation, DevOps, Serverless Computing, Cloud Computing, Resource Management, Automation, Microsoft Azure, Azure DevOps, Cost Optimization, CI/CD, Cloud Infrastructure]
 pin: true
