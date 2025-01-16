@@ -765,16 +765,16 @@ This project demonstrates how to deploy and automate an Azure infrastructure usi
 
 ## Quick Start
 1. Clone the repository:
-   ```bash
+
    git clone https://github.com/<YourGitHubUsername>/<YourRepoName>.git
-```
+
 
 2. Navigate to the project directory and deploy the templates:
 
-```bash
+
 cd AzureBicepProject/scripts
 deploy.bat
-```
+
 
 3. Monitor your resources in the Azure Portal.
 
@@ -787,16 +787,16 @@ We welcome contributions from the community! Whether you’re fixing a bug, addi
 2. **Clone the Repository**
   - Clone the forked repository to your local machine:
 
-```bash
+
 git clone https://github.com/<YourGitHubUsername>/<YourRepoName>.git
-```
+
 
 3. **Create a Feature Branch**
   - Use a descriptive branch name that reflects your changes:
 
-```bash
+
 git checkout -b feature/<FeatureName>
-```
+
 
 4. **Make Your Changes**
   - Implement your changes or improvements in the appropriate files.
@@ -804,22 +804,23 @@ git checkout -b feature/<FeatureName>
 5. Commit and Push Your Changes
   - Commit your changes with a clear and concise message:
 
-```bash
+
 git add .
 git commit -m "Add feature: <Short Description>"
-```
+
 
   - Push your branch to GitHub:
 
-```bash
+
 git push origin feature/<FeatureName>
-```
+
 6. **Submit a Pull Request**
   - Navigate to the original repository and click New Pull Request.
   - Select your feature branch and provide a detailed description of your changes in the pull request.
 7. **Collaborate on the Review**
   - Respond to comments or feedback during the review process.
   - Once approved, your changes will be merged into the main project!
+```
 
 > **tip:** For significant changes, consider opening an issue first to discuss your ideas before starting work. 
 {:.prompt-tip}
