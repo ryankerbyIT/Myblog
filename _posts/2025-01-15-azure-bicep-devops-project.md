@@ -68,7 +68,7 @@ The `main.bicep` file acts as the entry point for our project. It orchestrates t
 
 `main.bicep`
 
-```C#
+```plaintext
 @description('Location for all resources')
 param location string = resourceGroup().location
 
@@ -108,8 +108,8 @@ output storageAccountId string = storage.outputs.storageAccountId
 output vmId string = vm.outputs.vmId
 ```
 
-> **note**: The `main.bicep` file handles dependency management automatically by referencing module outputs, ensuring resources are deployed in the correct order.
-{:.prompt-note}
+> **info**: The `main.bicep` file handles dependency management automatically by referencing module outputs, ensuring resources are deployed in the correct order.
+{:.prompt-info}
 
 **Key Highlights**:
 
@@ -128,7 +128,7 @@ Each resource is defined in its own file, keeping the project clean and modular.
 
 **Virtual Network Module** **(`vnet.bicep`)**
 
-```bicep
+```plaintext
 @description('Location for the Virtual Network')
 param location string
 
@@ -167,8 +167,8 @@ output subnetId string = vnet.properties.subnets[0].id
 - **Reusability**: The `vnet.bicep` module can be reused in other projects or environments with different configurations.
 - **Ease of Maintenance**: Changes to the Virtual Network logic only require edits in this module.
 
-> **note**: The `vnet.bicep` module is reusable in other Azure projects by simply adjusting parameters like `vnetAddressPrefix` and `subnetAddressPrefix`.
-{:.prompt-note}
+> **tip**: The `vnet.bicep` module is reusable in other Azure projects by simply adjusting parameters like `vnetAddressPrefix` and `subnetAddressPrefix`.
+{:.prompt-tip}
 
 ---
 
@@ -212,8 +212,8 @@ scripts\deploy.bat
 
 ---
 
-> **note**: Always validate your Bicep templates using tools like `az bicep build` to catch syntax errors and ensure deployments succeed on the first attempt.
-{:.prompt-note}
+> **tip**: Always validate your Bicep templates using tools like `az bicep build` to catch syntax errors and ensure deployments succeed on the first attempt.
+{:.prompt-tip}
 
 ### Next Steps
 
@@ -249,7 +249,8 @@ if %ERRORLEVEL%==0 (
 )
 ```
 
-> info: Validation scripts like validate.bat save time by catching syntax errors early in the development process, preventing deployment failures. {:.prompt-info}
+> **info:** Validation scripts like validate.bat save time by catching syntax errors early in the development process, preventing deployment failures. 
+{:.prompt-info}
 
 ---
 
@@ -269,7 +270,8 @@ scripts\validate.bat
 - If the templates are valid, the script will display Validation successful!.
 - Otherwise, it will provide details about the error(s), helping you quickly identify and fix issues.
 
-> note: Always validate your Bicep templates after making changes to ensure consistency and accuracy. {:.prompt-note}
+> **tip:** Always validate your Bicep templates after making changes to ensure consistency and accuracy. 
+{:.prompt-tip}
 
 ---
 
@@ -304,7 +306,8 @@ if %ERRORLEVEL%==0 (
 )
 ```
 
-> info: Automating deployments with scripts ensures consistency across environments and reduces the risk of manual errors. {:.prompt-info}
+> **info:** Automating deployments with scripts ensures consistency across environments and reduces the risk of manual errors. 
+{:.prompt-info}
 
 ---
 
@@ -324,7 +327,8 @@ scripts\deploy.bat
 
 - If successful, the resources will be deployed to your specified Azure resource group.
 
-> note: Keep sensitive information, such as administrator credentials, secure by storing them in environment variables or Azure Key Vault instead of hardcoding them in scripts. {:.prompt-note}
+> **tip:** Keep sensitive information, such as administrator credentials, secure by storing them in environment variables or Azure Key Vault instead of hardcoding them in scripts. 
+{:.prompt-tip}
 
 ---
 
@@ -344,7 +348,8 @@ az resource list --resource-group <YourResourceGroupName>
 
 - - Confirm that each resource has the expected properties and status.
 
-> info: Verification ensures that your resources are deployed correctly and aligned with your project’s requirements. {:.prompt-info}
+> **info:** Verification ensures that your resources are deployed correctly and aligned with your project’s requirements. 
+{:.prompt-info}
 
 ---
 
@@ -362,7 +367,8 @@ If your deployment fails:
 az vm list-usage --location <YourLocation>
 ```
 
-> note: Common issues include invalid parameters, insufficient permissions, or exceeding Azure quotas. Address these before retrying the deployment. {:.prompt-note}
+> **tip:** Common issues include invalid parameters, insufficient permissions, or exceeding Azure quotas. Address these before retrying the deployment. 
+{:.prompt-tip}
 
 ---
 
@@ -443,7 +449,8 @@ def main(req: HttpRequest) -> HttpResponse:
         return HttpResponse(f"Error tagging resource: {str(e)}", status_code=500)
 ```
 
-> info: This function uses the Azure SDK to authenticate and interact with resources. Ensure the Function App has the necessary permissions to modify resources in your subscription. {:.prompt-info}
+> **tip:** This function uses the Azure SDK to authenticate and interact with resources. Ensure the Function App has the necessary permissions to modify resources in your subscription. 
+{:.prompt-tip}
 
 ---
 
@@ -469,7 +476,8 @@ curl -X POST <FunctionAppURL>/api/auto_tag \
         }'
 ```
 
-> note: Replace <FunctionAppURL> with your function's URL, available in the Azure Portal after deployment. {:.prompt-note}
+> **tip:** Replace <FunctionAppURL> with your function's URL, available in the Azure Portal after deployment. 
+{:.prompt-tip}
 
 ---
 
@@ -499,7 +507,8 @@ def main(event: HttpRequest) -> HttpResponse:
         return HttpResponse("Invalid event payload", status_code=400)
 ```
 
-> info: Event Grid triggers allow you to automate resource management tasks in real-time, eliminating the need for manual intervention. {:.prompt-info}
+> **info:** Event Grid triggers allow you to automate resource management tasks in real-time, eliminating the need for manual intervention. 
+{:.prompt-info}
 
 ---
 
@@ -509,7 +518,8 @@ Use Azure Monitor to track function executions and log any errors or performance
 **Enable Application Insights** during Function App creation for detailed monitoring.
 Review logs in the Azure Portal under the **"Monitor"** tab for your Function App.
 
-> note: Logging and monitoring help identify issues quickly and improve the reliability of your automation workflows. {:.prompt-note}
+> **tip:** Logging and monitoring help identify issues quickly and improve the reliability of your automation workflows. 
+{:.prompt-tip}
 
 ---
 
@@ -536,7 +546,7 @@ We’ll extend the `main.bicep` file to include the deployment of an Azure Funct
 
 **Update** `main.bicep`
 
-```bicep
+```plaintext
 module functionApp 'function-app.bicep' = {
   name: 'functionAppModule'
   params: {
@@ -551,7 +561,7 @@ output functionAppUrl string = functionApp.outputs.functionAppUrl
 
 **Create** `function-app.bicep`
 
-```bicep
+```plaintext
 @description('Location of the Function App')
 param location string
 
@@ -655,7 +665,8 @@ Add Timer Trigger in `function.json`
 }
 ```
 
-> info: The `schedule` property follows the CRON format. In this case, the function runs at 1:00 AM UTC daily. {:.prompt-info}
+> **info:** The `schedule` property follows the CRON format. In this case, the function runs at 1:00 AM UTC daily. 
+{:.prompt-info}
 
 ---
 
@@ -680,7 +691,8 @@ By integrating Azure Functions with Bicep templates, you achieve:
 2. Automated Management: Functions provide continuous, real-time management of resources.
 3. Cost Optimization: Automating tasks like cleaning up unused resources reduces unnecessary cloud costs.
 
-> note: This integration ensures your infrastructure is self-sustaining and optimized from the moment it is deployed. {:.prompt-note}
+> **tip:** This integration ensures your infrastructure is self-sustaining and optimized from the moment it is deployed. 
+{:.prompt-tip}
 
 ---
 
@@ -715,7 +727,8 @@ Implementing best practices in your IaC projects ensures scalability, collaborat
 - Why: Keeping your IaC under version control (e.g., Git) allows collaboration and tracks changes.
 - Tip: Commit regularly and use meaningful commit messages (e.g., `Add VNet module with default parameters`).
 
-> note: Adopting best practices for IaC ensures your projects are maintainable, scalable, and collaborative. {:.prompt-note}
+> **tip:** Adopting best practices for IaC ensures your projects are maintainable, scalable, and collaborative. 
+{:.prompt-tip}
 
 ---
 
@@ -808,7 +821,8 @@ git push origin feature/<FeatureName>
   - Respond to comments or feedback during the review process.
   - Once approved, your changes will be merged into the main project!
 
-> note: For significant changes, consider opening an issue first to discuss your ideas before starting work. {:.prompt-note}
+> **tip:** For significant changes, consider opening an issue first to discuss your ideas before starting work. 
+{:.prompt-tip}
 
 ---
 
@@ -842,11 +856,13 @@ Congratulations on completing this journey into Infrastructure as Code and autom
 - **Validation is Essential:** Always validate templates before deployment to avoid costly errors in production.
 - **Documentation Drives Impact:** Clear documentation makes your work accessible and useful to others, showcasing your expertise effectively.
 
-> info: This project demonstrated how combining IaC and automation fosters better DevOps practices, enabling more efficient cloud operations. {:.prompt-info}
+> **info:** This project demonstrated how combining IaC and automation fosters better DevOps practices, enabling more efficient cloud operations. 
+{:.prompt-info}
 
 ---
 
-Potential Next Steps
+## Potential Next Steps
+
 Ready to take your skills to the next level? Here are some advanced ideas to expand this project:
 
 1. **Add More Automation Scenarios**
@@ -867,7 +883,8 @@ Ready to take your skills to the next level? Here are some advanced ideas to exp
 - Write a series of tutorials based on this project to teach others how to use Bicep and Azure Functions effectively.
 - Present this project as a portfolio piece when applying for tech roles.
 
-> note: Expanding your automation and IaC expertise not only improves your skills but also positions you as a valuable contributor in the cloud and DevOps community. {:.prompt-note}
+> **tip:** Expanding your automation and IaC expertise not only improves your skills but also positions you as a valuable contributor in the cloud and DevOps community. 
+{:.prompt-tip}
 
 ---
 
