@@ -21,9 +21,9 @@ In the world of modern cloud computing, managing infrastructure effectively is c
 
 Bicep is an abstraction over Azure Resource Manager (ARM) templates, designed to make IaC simpler and more readable. It eliminates the verbosity of JSON-based ARM templates while retaining their power and flexibility. With Bicep, you can:
 
-- Simplify Syntax: Write clean, readable templates with less boilerplate.
-- Ensure Consistency: Use parameterization to standardize deployments across environments.
-- Promote Modularity: Break large templates into smaller, reusable components for better maintainability.
+- **Simplify Syntax:** Write clean, readable templates with less boilerplate.
+- **Ensure Consistency:** Use parameterization to standardize deployments across environments.
+- **Promote Modularity:** Break large templates into smaller, reusable components for better maintainability.
 
 > **info**: Bicep simplifies Azure resource management by reducing complexity, improving readability, and enabling modular deployments. It is an essential tool for anyone looking to embrace modern Infrastructure as Code practices.
 {:.prompt-info}
@@ -256,7 +256,7 @@ if %ERRORLEVEL%==0 (
 
 ## Running the Validation Script
 
-To validate your Bicep templates:
+**To validate your Bicep templates:**
 
 1. Open a command prompt or terminal.
 2. Navigate to the `scripts/` folder in your project.
@@ -312,9 +312,9 @@ if %ERRORLEVEL%==0 (
 ---
 
 ## Running the Deployment Script
-To deploy your templates:
+**To deploy your templates:**
 
-1. Ensure the validate.bat script has confirmed your templates are error-free.
+1. Ensure the `validate.bat` script has confirmed your templates are error-free.
 2. Open a command prompt or terminal.
 3. Navigate to the `scripts/` folder.
 4. Run the deployment script:
@@ -385,7 +385,7 @@ Azure Functions is a serverless compute service that allows you to run event-dri
 
 ---
 
-Use Case: Automating Resource Tagging
+## Use Case: Automating Resource Tagging
 To demonstrate the power of Azure Functions, we’ll create a function that automatically tags Azure resources with metadata (e.g., `Owner`, `Environment`) whenever they are created. Proper tagging helps with resource organization, cost tracking, and compliance.
 
 ---
@@ -687,9 +687,9 @@ curl -X POST <FunctionAppUrl>/api/cleanup_disks
 ## Benefits of Integration
 
 By integrating Azure Functions with Bicep templates, you achieve:
-1. Seamless Deployment: The function is deployed and configured alongside your infrastructure.
-2. Automated Management: Functions provide continuous, real-time management of resources.
-3. Cost Optimization: Automating tasks like cleaning up unused resources reduces unnecessary cloud costs.
+1. **Seamless Deployment:** The function is deployed and configured alongside your infrastructure.
+2. **Automated Management:** Functions provide continuous, real-time management of resources.
+3. **Cost Optimization:** Automating tasks like cleaning up unused resources reduces unnecessary cloud costs.
 
 > **tip:** This integration ensures your infrastructure is self-sustaining and optimized from the moment it is deployed. 
 {:.prompt-tip}
@@ -835,17 +835,17 @@ Congratulations on completing this journey into Infrastructure as Code and autom
 
 ## What We Accomplished
 
-1. Modular Infrastructure Deployment:
+1. **Modular Infrastructure Deployment:**
 
   - Designed reusable Bicep modules for deploying a Virtual Network, Storage Account, and Virtual Machine.
   - Utilized parameters and outputs to make the templates flexible and dynamic.
-2. Automation with Azure Functions:
+2. **Automation with Azure Functions:**
   - Integrated Azure Functions to automate resource management tasks, such as tagging and cleaning up unused resources.
   - Leveraged serverless compute to reduce manual intervention and optimize costs.
-3. Validation and Testing:
+3. **Validation and Testing:**
   - Created scripts for validating and deploying Bicep templates, ensuring error-free deployments.
   - Implemented monitoring and logging to verify infrastructure health and automation performance.
-4. Version Control and Sharing:
+4. **Version Control and Sharing:**
   - Organized the project for scalability and shared it on GitHub with comprehensive documentation, enabling others to learn and contribute.
 
 ---
