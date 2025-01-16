@@ -33,10 +33,11 @@ Bicep is an abstraction over Azure Resource Manager (ARM) templates, designed to
 
 In this project, we’ll build a modular Bicep-based system to deploy an Azure environment consisting of:
 
-- Virtual Network (VNet): Provides networking for other resources.
-- Storage Account: Stores data and files securely in Azure.
-- Virtual Machine (VM): Hosts applications or workloads.
-- We’ll adopt a modular approach, where each resource is defined in its own Bicep file, making it easier to reuse and manage components.
+- **Virtual Network (VNet):** Provides networking for other resources.
+- **Storage Account:** Stores data and files securely in Azure.
+- **Virtual Machine (VM):** Hosts applications or workloads.
+
+We’ll adopt a modular approach, where each resource is defined in its own Bicep file, making it easier to reuse and manage components.
 
 ---
 
@@ -338,9 +339,9 @@ After the deployment is complete, it’s essential to verify that all resources 
 ### Verification Checklist
 **Azure Portal:**
 - Log in to the Azure Portal and navigate to the resource group you deployed to.
-- - Check that the Virtual Network, Storage Account, and Virtual Machine are present.
+  - Check that the Virtual Network, Storage Account, and Virtual Machine are present.
 - **Azure CLI:**
-- - Use the CLI to list deployed resources:
+  - Use the CLI to list deployed resources:
 
 ```bash
 az resource list --resource-group <YourResourceGroupName>
@@ -712,20 +713,20 @@ As we conclude this project, it’s essential to reflect on the best practices t
 Implementing best practices in your IaC projects ensures scalability, collaboration, and reduced errors.
 
 1. **Modularity**
-- Why: Breaking templates into smaller modules (e.g., `vnet.bicep`, `storage.bicep`) improves reusability and readability.
-- Tip: Create a `modules/` directory if you have numerous components to organize them logically.
+   - Why: Breaking templates into smaller modules (e.g., `vnet.bicep`, `storage.bicep`) improves reusability and readability.
+   - Tip: Create a `modules/` directory if you have numerous components to organize them logically.
 2. **Parameterization**
-- Why: Parameters make your templates reusable across environments (e.g., development, staging, production).
-- Tip: Use default values for common parameters and secure sensitive data with `@secure()`.
+   - Why: Parameters make your templates reusable across environments (e.g., development, staging, production).
+   - Tip: Use default values for common parameters and secure sensitive data with `@secure()`.
 3. **Validation**
-- Why: Validating your templates before deployment reduces runtime errors.
-- Tip: Use scripts like `validate.bat` to automate this process as part of your CI/CD pipeline.
+   - Why: Validating your templates before deployment reduces runtime errors.
+   - Tip: Use scripts like `validate.bat` to automate this process as part of your CI/CD pipeline.
 4. **Outputs**
-- Why: Outputs provide critical resource details (e.g., IDs, endpoints) that can be used by other workflows.
-- Tip: Use meaningful output names and include them in deployment logs for easy reference.
+   - Why: Outputs provide critical resource details (e.g., IDs, endpoints) that can be used by other workflows.
+   - Tip: Use meaningful output names and include them in deployment logs for easy reference.
 5. **Version Control**
-- Why: Keeping your IaC under version control (e.g., Git) allows collaboration and tracks changes.
-- Tip: Commit regularly and use meaningful commit messages (e.g., `Add VNet module with default parameters`).
+   - Why: Keeping your IaC under version control (e.g., Git) allows collaboration and tracks changes.
+   - Tip: Commit regularly and use meaningful commit messages (e.g., `Add VNet module with default parameters`).
 
 > **tip:** Adopting best practices for IaC ensures your projects are maintainable, scalable, and collaborative. 
 {:.prompt-tip}
@@ -738,12 +739,12 @@ Clear and concise documentation makes your project accessible to others and demo
 1. **Write a Comprehensive** **`README.md`**
 Your README is the first impression of your project. Include:
 
-- **Project Overview:** Explain what the project does and its purpose.
-- **Prerequisites:** List required tools (e.g., Azure CLI, Bicep CLI).
-- **Setup Instructions:** Provide step-by-step instructions to set up and deploy the project.
-- **Features:** Highlight key features, such as modularity, automation, and cost optimization.
-- **Usage Examples:** Show deployment commands and automation results.
-- **Contributing:** Encourage contributions by explaining how others can contribute.
+   - **Project Overview:** Explain what the project does and its purpose.
+   - **Prerequisites:** List required tools (e.g., Azure CLI, Bicep CLI).
+   - **Setup Instructions:** Provide step-by-step instructions to set up and deploy the project.
+   - **Features:** Highlight key features, such as modularity, automation, and cost optimization.
+   - **Usage Examples:** Show deployment commands and automation results.
+   - **Contributing:** Encourage contributions by explaining how others can contribute.
 
 **Example `README.md` Snippet:**
 
@@ -837,16 +838,16 @@ Congratulations on completing this journey into Infrastructure as Code and autom
 
 1. **Modular Infrastructure Deployment:**
 
-  - Designed reusable Bicep modules for deploying a Virtual Network, Storage Account, and Virtual Machine.
-  - Utilized parameters and outputs to make the templates flexible and dynamic.
+     - Designed reusable Bicep modules for deploying a Virtual Network, Storage Account, and Virtual Machine.
+     - Utilized parameters and outputs to make the templates flexible and dynamic.
 2. **Automation with Azure Functions:**
-  - Integrated Azure Functions to automate resource management tasks, such as tagging and cleaning up unused resources.
-  - Leveraged serverless compute to reduce manual intervention and optimize costs.
+     - Integrated Azure Functions to automate resource management tasks, such as tagging and cleaning up unused resources.
+     - Leveraged serverless compute to reduce manual intervention and optimize costs.
 3. **Validation and Testing:**
-  - Created scripts for validating and deploying Bicep templates, ensuring error-free deployments.
-  - Implemented monitoring and logging to verify infrastructure health and automation performance.
+     - Created scripts for validating and deploying Bicep templates, ensuring error-free deployments.
+     - Implemented monitoring and logging to verify infrastructure health and automation performance.
 4. **Version Control and Sharing:**
-  - Organized the project for scalability and shared it on GitHub with comprehensive documentation, enabling others to learn and contribute.
+     - Organized the project for scalability and shared it on GitHub with comprehensive documentation, enabling others to learn and contribute.
 
 ---
 
@@ -867,22 +868,22 @@ Congratulations on completing this journey into Infrastructure as Code and autom
 Ready to take your skills to the next level? Here are some advanced ideas to expand this project:
 
 1. **Add More Automation Scenarios**
-- Implement additional Azure Functions for tasks like:
-- Auto-scaling Virtual Machines based on CPU usage.
-- Generating cost reports using the Azure Cost Management API.
-- Automatically backing up resources like databases and storage accounts.
+   - Implement additional Azure Functions for tasks like:
+   - Auto-scaling Virtual Machines based on CPU usage.
+   - Generating cost reports using the Azure Cost Management API.
+   - Automatically backing up resources like databases and storage accounts.
 2. **Incorporate Advanced Bicep Features**
-- Use conditionals and loops in Bicep to handle more complex scenarios.
-- Explore target scopes to manage multiple resource groups or subscriptions.
+   - Use conditionals and loops in Bicep to handle more complex scenarios.
+   - Explore target scopes to manage multiple resource groups or subscriptions.
 3. **Integrate CI/CD Pipelines**
-- Automate validation and deployment using tools like GitHub Actions or Azure DevOps.
-- Include steps for testing automation workflows as part of your pipeline.
+   - Automate validation and deployment using tools like GitHub Actions or Azure DevOps.
+   - Include steps for testing automation workflows as part of your pipeline.
 4. **Explore Policy as Code**
-- Use Azure Policy to enforce compliance automatically for all deployed resources.
-- Write and deploy custom policies as part of your IaC pipeline.
+   - Use Azure Policy to enforce compliance automatically for all deployed resources.
+   - Write and deploy custom policies as part of your IaC pipeline.
 5. **Share Your Work**
-- Write a series of tutorials based on this project to teach others how to use Bicep and Azure Functions effectively.
-- Present this project as a portfolio piece when applying for tech roles.
+   - Write a series of tutorials based on this project to teach others how to use Bicep and Azure Functions effectively.
+   - Present this project as a portfolio piece when applying for tech roles.
 
 > **tip:** Expanding your automation and IaC expertise not only improves your skills but also positions you as a valuable contributor in the cloud and DevOps community. 
 {:.prompt-tip}
