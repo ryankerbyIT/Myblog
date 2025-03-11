@@ -107,7 +107,7 @@ A well-designed database schema is the foundation of an ACID-compliant banking l
 
 ## Core Database Tables
 
-![Entity-Relationship Diagram](images/erd.png)  
+![Entity-Relationship Diagram](/assets/images/erd.png)  
 > 📌 **Diagram:** The Entity-Relationship Diagram (ERD) above visually represents the structure and relationships between Users, Accounts, Transactions, and the Ledger. It helps in understanding how data flows between different tables.
 
 To build a robust banking ledger system, we define the following essential tables:
@@ -178,7 +178,7 @@ Maintains a double-entry bookkeeping record.
 
 # `Normalization` & Constraints
 
-![Schema Diagram](images/schema-diagram.png)  
+![Schema Diagram](/assets/images/schema-diagram.png)  
 > ℹ️ **Diagram:** The Schema Diagram (Physical Database Model) above details primary keys, foreign keys, and constraints for each table, ensuring data integrity and enforcing relationships.
 
 
@@ -201,7 +201,7 @@ To maintain data integrity and ACID compliance:
 
 # SQL Implementation of ACID Compliance
 
-![ACID Transaction Flow Diagram](images/acid-transaction-flow.png)  
+![ACID Transaction Flow Diagram](/assets/images/acid-transaction-flow.png)  
 > ✅ **Diagram:** The ACID Transaction Flow Diagram above shows how a transaction ensures atomicity, consistency, isolation, and durability. If any step fails, the entire transaction is rolled back to maintain database integrity.
 
 Transactions must be atomic, consistent, isolated, and durable. Here’s an example of a transaction-safe fund transfer:
@@ -230,7 +230,7 @@ This ensures that if any step fails, the entire transaction rolls back, maintain
 
 # Conclusion
 
-![Double-Entry Ledger Diagram](images/double-entry-ledger.png)  
+![Double-Entry Ledger Diagram](/assets/images/double-entry-ledger.png)  
 > 🔍 **Diagram:** The Double-Entry Ledger Diagram above illustrates how each financial transaction is recorded with a debit and a corresponding credit, ensuring that the ledger remains balanced and accurate.
 
 By designing a well-structured database with appropriate constraints, relationships, and transactional integrity, we enforce ACID compliance within our banking ledger system. The next section will cover Transaction Management & Isolation Levels to further strengthen reliability and concurrency control.
@@ -251,7 +251,7 @@ The banking ledger system consists of several key tables that represent users, a
 > The following **Entity-Relationship Diagram (ERD)** visually represents the core tables and their relationships within the **Banking Ledger System**.
 {:.prompt-info}
 
-![Entity-Relationship Diagram](path/to/erd_diagram.png)
+![Entity-Relationship Diagram](/assets/images/erd_diagram.png)
 
 ## Accounts Table
 
@@ -396,7 +396,7 @@ ACID compliance is reinforced by:
 > This **Transaction Flow Diagram** illustrates how a transaction moves through the system from initiation to completion, ensuring data integrity and financial accuracy.
 {:.prompt-info}
 
-![Transaction Flow Diagram](path/to/transaction_flow_diagram.png)
+![Transaction Flow Diagram](/assets/images/transaction_flow_diagram.png)
 
 Example of an Atomic Transaction:
 
@@ -413,7 +413,7 @@ This ensures either all operations succeed together, or none take effect, mainta
 > The following **ACID Compliance Process Flow Diagram** demonstrates how the **Banking Ledger System** enforces **Atomicity, Consistency, Isolation, and Durability** through structured transaction management.
 {:.prompt-info}
 
-![ACID Compliance Process Flow](path/to/acid_compliance_diagram.png)
+![ACID Compliance Process Flow](/assets/images/acid_compliance_diagram.png)
 
 
 With this robust schema, the banking ledger system maintains data integrity, transaction reliability, and optimal performance while adhering to ACID principles. The next section will delve into Isolation Levels and Concurrency Control to ensure safe and efficient multi-user transactions.
@@ -433,7 +433,7 @@ Ensuring data consistency in a multi-user banking ledger system requires robust 
 
 ### 1. Dirty Reads
 
-![Dirty Read Concurrency Issue](path/to/dirty_read_diagram.png)
+![Dirty Read Concurrency Issue](/assets/images/dirty_read_diagram.png)
 
 Occurs when a transaction reads uncommitted data from another transaction, leading to inconsistencies.
 
@@ -518,7 +518,7 @@ To prevent concurrency issues, databases offer different isolation levels that c
 
 Deadlocks occur when two or more transactions block each other by waiting for resources locked by another transaction.
 
-![Deadlock Scenario in Banking Transactions](path/to/deadlock_diagram.png)
+![Deadlock Scenario in Banking Transactions](/assets/images/deadlock_diagram.png)
 
 > Info: Deadlocks occur when transactions hold locks on different resources and wait indefinitely. Implementing deadlock detection and resolution can prevent system slowdowns.
 {:.prompt-info}
@@ -545,7 +545,7 @@ Deadlock Handling: Detect and resolve conflicts between concurrent transactions.
 
 Optimistic concurrency control (OCC) assumes that conflicts are rare and checks for conflicts at commit time, whereas pessimistic concurrency control locks data upfront to prevent conflicts.
 
-![Optimistic vs. Pessimistic Concurrency Control](path/to/concurrency_control_diagram.png)
+![Optimistic vs. Pessimistic Concurrency Control](/assets/images/concurrency_control_diagram.png)
 
 > Tip: Optimistic concurrency control (OCC) is ideal for high-read, low-write workloads, while pessimistic locking is better for environments with frequent data modifications.
 {:.prompt-tip}
@@ -575,7 +575,7 @@ Concurrency control is essential for maintaining accuracy in a multi-user bankin
 
 In this section, we will explore the strategies and techniques used to ensure ACID (Atomicity, Consistency, Isolation, Durability) compliance in banking transactions. A robust banking ledger system must adhere to these properties to maintain data integrity and reliability.
 
-![ACID Compliance Overview](path/to/acid_compliance_overview.png)
+![ACID Compliance Overview](/assets/images/acid_compliance_overview.png)
 
 > This diagram summarizes the four key ACID properties—Atomicity, Consistency, Isolation, and Durability—essential for ensuring reliable banking transactions.
 {:.prompt-info}
@@ -584,7 +584,7 @@ In this section, we will explore the strategies and techniques used to ensure AC
 
 Atomicity guarantees that a transaction is either fully completed or fully rolled back in case of failure. This is crucial in banking, where partial transactions can lead to data corruption or financial inconsistencies.
 
-![Atomicity Transaction Rollback Flow](path/to/atomicity_rollback.png)
+![Atomicity Transaction Rollback Flow](/assets/images/atomicity_rollback.png)
 
 > This diagram illustrates how transactions are either fully completed or rolled back in case of failure, ensuring Atomicity.
 {:.prompt-tip
@@ -640,7 +640,7 @@ Isolation ensures that concurrent transactions do not interfere with each other,
 
 - **Serializable** – Strictest level, ensuring full isolation.
 
-![Transaction Processing with Isolation Levels](path/to/isolation_levels.png)
+![Transaction Processing with Isolation Levels](/assets/images/isolation_levels.png)
 
 > This timeline illustrates how transactions behave under different isolation levels, from Read Uncommitted to Serializable.
 {:.prompt-info}
@@ -670,7 +670,7 @@ Durability guarantees that once a transaction is committed, it remains permanent
 
 ## 5.5 Practical Implementation in SQL
 
-![Durability WAL and Database Replication](path/to/durability_wal_replication.png)
+![Durability WAL and Database Replication](/assets/images/durability_wal_replication.png)
 
 > This block diagram demonstrates how transactions are permanently stored using Write-Ahead Logging (WAL) and database replication to ensure durability.
 {:.prompt-info}
@@ -709,7 +709,7 @@ A transaction in the banking ledger system follows a structured lifecycle:
 4. **Commit or Rollback:** Based on success or failure, the system either commits the transaction (persisting changes) or rolls it back (restoring the previous state).
 5. **Notification & Auditing:** The system records the final state in audit logs and notifies the user.
 
-![Transaction Lifecycle Flowchart](path/to/transaction_lifecycle2.png)
+![Transaction Lifecycle Flowchart](/assets/images/transaction_lifecycle2.png)
 
 > Info: Understanding Transaction Flow
 This diagram shows the sequence of steps in a banking transaction, ensuring that each phase (initiation, validation, execution, and commit/rollback) follows a structured process to maintain data integrity.
@@ -731,7 +731,7 @@ To maintain data integrity in a financial system, transactions must fulfill the 
 In financial systems, isolation ensures that concurrent transactions do not interfere with each other. For example, if two customers attempt to withdraw money simultaneously from the same account, isolation prevents them from exceeding the available balance due to race conditions. Without proper isolation, a bank could allow multiple withdrawals before updating the balance, leading to financial discrepancies.
 {:.prompt-info}
 
-![ACID Compliance Diagram](path/to/acid_compliance.png)
+![ACID Compliance Diagram](/assets/images/acid_compliance.png)
 
 > Info: How ACID Protects Banking Transactions
 ACID properties ensure that all financial transactions remain valid and consistent. Atomicity guarantees all-or-nothing execution, Isolation prevents interference, Consistency maintains business rules, and Durability ensures committed data persists.
@@ -752,7 +752,7 @@ Banking systems require high concurrency while preventing anomalies like race co
 Use `READ COMMITTED` for general banking queries to balance performance and consistency. For critical transactions such as fund transfers, `SERIALIZABLE` is the safest choice, ensuring full isolation at the cost of reduced concurrency.
 {:.prompt-tip}
 
-![SQL Isolation Levels Hierarchy](path/to/isolation_levels2.png)
+![SQL Isolation Levels Hierarchy](/assets/images/isolation_levels2.png)
 
 > Tip: Choosing the Right Isolation Level
 The stricter the isolation level, the stronger the data integrity but at the cost of performance. This pyramid diagram illustrates the trade-offs, with `Serializable` offering the highest consistency and `Read Uncommitted` providing the fastest execution.
@@ -817,7 +817,7 @@ Deadlocks occur when two transactions wait for each other indefinitely. Preventa
 To avoid deadlocks, ensure that all transactions acquire locks in the same order. Additionally, avoid long-running transactions that hold locks for extended periods. Optimizing queries and using index-based lookups can help reduce contention.
 {:.prompt-tip}
 
-![Deadlock Example Diagram](path/to/deadlock_example.png)
+![Deadlock Example Diagram](/assets/images/deadlock_example.png)
 
 > Info: Understanding Deadlocks
 Deadlocks occur when two transactions wait indefinitely for each other to release a resource. This diagram illustrates a classic deadlock scenario where `Transaction T1` and `Transaction T2` hold and wait for the same resources, leading to a circular wait.
